@@ -17,14 +17,24 @@ const WeatherCard = ({ weather }) => {
   );
 };
 
+WeatherCard.defaultProps = {
+  weather: {
+    date: '',
+    imageUrl: '',
+    imageName: '',
+    maxTemp: null,
+    minTemp: null,
+  },
+};
+
 WeatherCard.propTypes = {
-    weather: React.PropTypes.shape({
-        date: PropTypes.date,
-        imageUrl: PropTypes.string,
-        imageName: PropTypes.string,
-        maxTemp: PropTypes.number,
-        minTemp: PropTypes.number
-    })
-}
+  weather: PropTypes.shape({
+    date: PropTypes.string,
+    imageUrl: PropTypes.string,
+    imageName: PropTypes.string,
+    maxTemp: PropTypes.number,
+    minTemp: PropTypes.number,
+  }),
+};
 
 export default WeatherCard;

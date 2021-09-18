@@ -5,7 +5,7 @@ import { imgUrl, apiUrl } from '../helpers/url';
 const WeatherCardCont = () => {
   const [location, setLocation] = useState('London');
   const [weather, setWeather] = useState({});
-  
+
   const handleChange = (e) => {
     setLocation(e.target.value);
   };
@@ -24,7 +24,5 @@ const WeatherCardCont = () => {
     </div>
   );
 };
-
-
 
 export default WeatherCardCont;
