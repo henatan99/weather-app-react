@@ -3,7 +3,7 @@ import WeatherCardCont from './containers/WeatherCard';
 
 function App() {
   return (
-   <WeatherCardCont />
+    <WeatherCardCont />
   );
 }
 
