@@ -11,7 +11,14 @@ const WeatherCardCont = () => {
   };
   const handleClick = async () => {
     const response = await fetch(apiUrl(location));
-    console.log(response);
+    const data = await response.json();
+    setWeather({
+      date: 'Tuesday',
+      imageUrl: imgUrl(data.weather[0].icon),
+      imageName: data.weather[0].icon,
+      maxTemp: data.main.temp_max,
+      minTemp: data.main.temp_min,
+    });
   };
 
   return (
